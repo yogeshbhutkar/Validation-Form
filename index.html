@@ -88,7 +88,7 @@
     <div>
       <div class="container">
         <h2>Entries</h2>
-        <div id="user-entries"></div>
+        <div id="user_entries"></div>
       </div>
     </div>
     <script>
@@ -108,7 +108,6 @@
         let doy = d.getFullYear();
         let age = currentYear - doy;
         if (age < 18 || age > 55) {
-          alert("Invalid age");
           date.setCustomValidity("Invalid Date of Birth.");
           date.reportValidity();
         }

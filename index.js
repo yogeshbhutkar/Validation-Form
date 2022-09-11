@@ -13,7 +13,7 @@ const retrieveEntries = () => {
 let userEntries = [];
 
 const displayEntries = () => {
-  const entries = retrieveEntries();
+  let entries = retrieveEntries();
   const tableEntries = entries
     .map((entry) => {
       const nameCell = `<td>${entry.name}</td>`;
@@ -32,11 +32,11 @@ const displayEntries = () => {
     <th>Name</th>
     <th>Email</th>
     <th>Password</th>
-    <th>dob</th>
-    <th>accepted terms</th>
+    <th>Dob</th>
+    <th>Accepted terms?</th>
     </tr>${tableEntries}</table>`;
 
-  let details = document.getElementById("user-entries");
+  let details = document.getElementById("user_entries");
   details.innerHTML = table;
 };
 
@@ -61,6 +61,7 @@ const saveUserForm = (event) => {
 
   localStorage.setItem("user-entries", JSON.stringify(userEntries));
   displayEntries();
+  userForm.reset();
 };
 
 userForm.addEventListener("submit", saveUserForm);
