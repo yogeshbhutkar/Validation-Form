@@ -1,0 +1,13 @@
+.pos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+
+#name:invalid:focus{
+    border: 2px solid red;
+}
+#email:invalid:focus{
+    border: 2px solid red;
+}
